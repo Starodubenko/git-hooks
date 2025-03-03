@@ -1,1 +1,1 @@
-const newInput = 3;
+const newInput = 4;
