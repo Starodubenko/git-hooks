@@ -1,0 +1,1 @@
+const newInput = 0;
