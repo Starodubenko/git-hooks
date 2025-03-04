@@ -15,7 +15,7 @@ for keyword in "${KEYWORDS[@]}"; do
             . "$SIMPLE_GIT_HOOKS_RC"
         fi
 
-        npm run changelog
+        npm run changelog --filter=tech-fix
 
         git add CHANGELOG.md
         git commit -m "Добавлен список изменений в changelog"
