@@ -1,5 +1,9 @@
 # changelog
 
+## 1.0.1 
+
+ - [Task-04]: Добавлены изменения в pre-push
+
 ## 1.0.0 
 
  - [TASK-03]: Added git-hooks
@@ -10,4 +14,3 @@
  - Fixed input
  - Added new input
  - Inital commit
-
