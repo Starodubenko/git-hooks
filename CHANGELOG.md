@@ -1,5 +1,10 @@
 # changelog
 
+## 1.0.4 
+
+ - [Task-04]: поправлена генерация  changelog
+ - [Task-04]: Добавлен список изменений в changelog
+
 ## 1.0.3 
 
  - [Task-04]: Поправлен postinstall скрипт
