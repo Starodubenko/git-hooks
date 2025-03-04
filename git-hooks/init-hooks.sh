@@ -9,3 +9,5 @@ cp git-hooks/prepare-commit-msg .git/hooks/
 chmod +x .git/hooks/pre-commit
 chmod +x .git/hooks/pre-push
 chmod +x .git/hooks/prepare-commit-msg
+
+echo "Хуки успешно добавлены в .git/hooks"
