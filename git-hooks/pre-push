@@ -16,6 +16,10 @@ for keyword in "${KEYWORDS[@]}"; do
         fi
 
         npm run changelog
+
+        git add CHANGELOG.md
+        git commit -m "Добавлен список изменений в changelog"
+        
         exit 0
     fi
 done
