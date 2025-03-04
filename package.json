@@ -1,0 +1,17 @@
+{
+  "name": "git-hooks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "changelog": "changelog --titled",
+    "init-git-hooks": "chmod +x ./git-hooks/init-hooks.sh && ./git-hooks/init-hooks.sh"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "npm-changelog": "^1.1.6"
+  }
+}

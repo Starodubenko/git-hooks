@@ -1,0 +1,11 @@
+#!/bin/sh
+COMMIT_MSG_FILE=$1
+COMMIT_SOURCE=$2
+SHA1=$3
+
+branch_name=$(git rev-parse --abbrev-ref HEAD) # Получаем название текущей ветки
+task_name=$(echo "$branch_name" | grep -o -E '/([^/]+)/' | sed 's/\///g') # Извлекаем имя задачи из названия ветки между символами "/"
+
+if [ -n "$task_name" ]; then
+    sed -i.bak "1s/^/[$task_name]: /" "$COMMIT_MSG_FILE" # Добавляем имя задачи в начало первой строки сообщения коммита
+fi

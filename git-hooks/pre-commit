@@ -1,0 +1,17 @@
+#!/bin/sh
+
+branch=$(git symbolic-ref --short HEAD)
+
+
+# Проверяем первую часть формата
+branch_type=$(echo $branch | cut -d'/' -f1)
+if [[ ! "$branch_type" =~ ^(feature|bugfix|hotfix|release)$ ]]; then
+    echo "Ошибка: Первая часть имени ветки ($branch) должна быть одним из вариантов: feature, bugfix, hotfix, release"
+    exit 1
+fi
+
+# Проверяем формат имени ветки
+if [[ ! $branch =~ ^(feature|bugfix|hotfix|release)\/[a-zA-Z0-9_\-]+\/[a-zA-Z0-9_\-]+$ ]]; then
+    echo "Ошибка: Формат имени ветки ($branch) должен быть: [тип]/[название задачи]/[название ветки]"
+    exit 1
+fi
