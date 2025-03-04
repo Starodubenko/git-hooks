@@ -1,11 +1,11 @@
 {
   "name": "git-hooks",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "changelog": "changelog --titled",
+    "changelog": "changelog --titled --filter=tech-fix",
     "init-git-hooks": "chmod +x ./git-hooks/init-hooks.sh && ./git-hooks/init-hooks.sh",
     "postinstall": "npm run init-git-hooks"
   },
